@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  
+  --color-primary: #6EA8FF;
+  --color-secondary: #A76CFF;
+}
+
+@layer base {
+  :root {
+    /* Layout */
+    --max-width: 1400px;
+    --container-padding: 1.5rem;
+
+    /* Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --accent-primary: #6EA8FF;
+    --accent-secondary: #A76CFF;
+
+    /* Transitions */
+    --transition-base: 0.3s ease;
+
+    /* Shadows */
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    cursor: auto;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Make sure main text is clearly readable by default */
+  h1, h2, h3, h4, p, a, button, span {
+    color: var(--text-primary);
+  }
+
+  /* Restore cursor on touch devices */
+  @media (pointer: coarse) {
+    html {
+      cursor: auto;
+    }
+  }
+}
+
+@layer components {
+  .section-container {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+    width: 100%;
+    padding-top: clamp(2rem, 4vw, 3rem);
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-heading font-semibold tracking-tight text-center mb-4;
+    background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-400 text-center max-w-2xl mx-auto mb-16;
+  }
+
+  .card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl;
+    transition: all var(--transition-base);
+  }
+
+  .card:hover {
+    @apply bg-white/10 border-white/20;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all;
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    color: var(--text-primary);
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(110, 168, 255, 0.4);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg border border-white/20 text-gray-200 font-medium transition-all;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-white/10 border-white/30;
+    transform: scale(1.03);
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
