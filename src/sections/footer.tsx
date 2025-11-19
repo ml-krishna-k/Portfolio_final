@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Magnetic from "../components/Magnetic";
 import { FaArrowUp } from "react-icons/fa"; // Ensure you have react-icons installed
 
