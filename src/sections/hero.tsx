@@ -3,7 +3,7 @@ import { useState } from "react";
 import Magnetic from "../components/Magnetic";
 
 export default function Hero() {
-  const [imgSrc, setImgSrc] = useState('/hero.png');
+  const [imgSrc, setImgSrc] = useState('/hero3.png');
 
   // Typewriter Logic
   const typewriterText = "Architecting intelligent RAG pipelines and high-performance inference systems.";
@@ -142,7 +142,7 @@ export default function Hero() {
               <img
                 src={imgSrc}
                 alt="Krishna"
-                onError={() => setImgSrc('/hero2.jpeg')}
+                onError={() => setImgSrc('/hero3.png')}
                 className="w-full h-full object-cover object-center grayscale opacity-80 transition-all duration-[1.5s] ease-out group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100"
               />
               
