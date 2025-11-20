@@ -7,7 +7,9 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative w-full bg-[#050505] overflow-hidden">
-      
+      <br />
+      <br />
+
       {/* --- LUXURY TEXTURE --- */}
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
@@ -40,6 +42,7 @@ export default function Experience() {
         <div className="flex flex-col">
           {experienceData.map((item, index) => (
             <ExperienceRow key={index} item={item} index={index} />
+            
           ))}
           {/* Final bottom border to close the list */}
           <div className="w-full h-[1px] bg-white/10" />
@@ -62,11 +65,11 @@ function ExperienceRow({ item, index }: { item: any, index: number }) {
     >
       <div className="py-16 flex flex-col md:flex-row gap-8 md:gap-0 items-start md:items-baseline">
         
-        {/* COLUMN 1: PERIOD (The "When") */}
+        {/* year and date*/}
         <div className="w-full md:w-1/4">
             <div className="inline-flex items-center gap-3">
                 <span className="text-[#bf9b30] text-xs font-mono uppercase tracking-widest">
-                    {/* Add a leading zero for aesthetics if single digit index */}
+                    
                     0{index + 1}
                 </span>
                 <span className="text-sm text-neutral-400 font-medium tracking-widest uppercase group-hover:text-white transition-colors duration-300">
@@ -75,7 +78,7 @@ function ExperienceRow({ item, index }: { item: any, index: number }) {
             </div>
         </div>
 
-        {/* COLUMN 2: ROLE & COMPANY (The "What") */}
+        {/* ROLE & COMPANY */}
         <div className="w-full md:w-1/3">
             <h3 className="text-3xl md:text-4xl font-serif text-white mb-2 group-hover:translate-x-2 transition-transform duration-500 ease-out">
                 {item.title}
@@ -85,7 +88,7 @@ function ExperienceRow({ item, index }: { item: any, index: number }) {
             </p>
         </div>
 
-        {/* COLUMN 3: DESCRIPTION (The "How") */}
+        {/*How */}
         <div className="w-full md:w-5/12 pl-0 md:pl-8">
             <ul className="flex flex-col gap-4">
                 {item.bullets.map((bullet: string, i: number) => (
@@ -102,7 +105,7 @@ function ExperienceRow({ item, index }: { item: any, index: number }) {
 
       </div>
 
-      {/* Hover Interaction: Gold Line expands from left */}
+      
       <div className="absolute top-0 left-0 w-0 h-[1px] bg-[#bf9b30] group-hover:w-full transition-all duration-1000 ease-[0.22,1,0.36,1]" />
     </motion.div>
   );
