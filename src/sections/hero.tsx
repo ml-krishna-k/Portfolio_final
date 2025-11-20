@@ -96,7 +96,7 @@ export default function Hero() {
                   href="https://drive.google.com/file/d/19JAoq6NV-7nrJiXHHaB0cUUX_vOdxpKz/view?usp=sharing"
                   target= "_blank"
                   rel="noopener noreferrer"
-                  className="relative group overflow-hidden bg-[#e8e8e8] text-green px-8 py-4 rounded-full flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                  className="relative group overflow-hidden bg-[#9e9e9e] text-green px-8 py-4 rounded-full flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                 >
                   <span className="relative z-10 text-xs font-bold uppercase tracking-[0.2em]">
                     Get Resume
