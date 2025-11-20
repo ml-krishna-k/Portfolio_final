@@ -13,9 +13,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Collection", href: "#work" },
+    { name: "Collection", href: "#projects" },
     { name: "Expertise", href: "#skills" },
-    { name: "Heritage", href: "#about" },
+    { name: "Heritage", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -56,7 +56,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* --- CENTER LOGO (The "Crown") --- */}
+          {/* CENTER LOGO */}
           <div className="flex-shrink-0 relative z-20 mx-auto">
             <Magnetic>
               <a href="#home" className="flex flex-col items-center group">
@@ -64,13 +64,13 @@ export default function Navbar() {
                   K.
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.3em] text-neutral-400 mt-1 group-hover:text-white transition-colors">
-                  Design
+                  GenAI
                 </span>
               </a>
             </Magnetic>
           </div>
 
-          {/* --- RIGHT SIDE LINKS --- */}
+          {/*  RIGHT SIDE LINKS  */}
           <div className="hidden md:flex flex-1 justify-end gap-12">
             {rightLinks.map((link) => (
               <Magnetic key={link.name}>
@@ -125,9 +125,7 @@ export default function Navbar() {
               ))}
             </div>
             
-            <div className="absolute bottom-12 text-[10px] uppercase tracking-[0.3em] text-neutral-600">
-              International
-            </div>
+            
           </motion.div>
         )}
       </AnimatePresence>
